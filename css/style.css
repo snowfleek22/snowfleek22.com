@@ -853,7 +853,6 @@ form textarea
     .experience,
     .about .skills,
     .form .form-info,
-    .media-info-item,
     .portfolio .portfolio-item,
     .about .personal-info
     {
@@ -873,5 +872,9 @@ form textarea
     .experience .title
     {
         margin-top: 70px;
-    }   
+    }  
+    .media-info-item
+    {
+        flex: 0 0 50%;
+    }
 }
