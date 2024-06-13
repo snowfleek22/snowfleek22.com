@@ -870,4 +870,8 @@ form textarea
         margin-bottom: 70px;
 
     }
+    .experience .title
+    {
+        margin-top: 60px;
+    }   
 }
