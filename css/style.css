@@ -538,6 +538,26 @@ ul
     border-radius: 50%;
     background-color: var(--skin-color);
 }
+.experience .timeline-item .circle-dot
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: var(--skin-color);
+}
+.experience .timeline-item::before
+{
+    content: '';
+    width: 2px;
+    position: absolute;
+    height: 100%;
+    left: 7px;
+    top: 0;
+    background-color: var(--skin-color);
+}
 
 /*****portfolio******/
 
