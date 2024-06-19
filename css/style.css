@@ -548,6 +548,10 @@ ul
     border-radius: 50%;
     background-color: var(--skin-color);
 }
+.timeline-item .fa
+{
+    margin-left: 30px;
+}   
 .experience .timeline-item::before
 {
     content: '';
