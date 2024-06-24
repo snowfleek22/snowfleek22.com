@@ -1,7 +1,7 @@
 document.getElementById('downloadBtn').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default behavior of the anchor tag
     // Replace 'path_to_your_file' with the actual path to your file
-    var fileUrl = 'CURRICULUM_VITAE.pdf';
+    var fileUrl = 'CURRICULUM_VITA.pdf';
     var fileName = 'My CV.pdf'; // Change the filename as needed
 
     fetch(fileUrl)
