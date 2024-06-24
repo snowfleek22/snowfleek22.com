@@ -1,4 +1,8 @@
-
+function scrollToHome() {
+    var aboutSection = document.querySelector('.home');
+    aboutSection.scrollIntoView({behavior: "smooth"})
+    
+}
 
 function scrollToAbout() {
     var aboutSection = document.querySelector('.about');
