@@ -332,7 +332,7 @@
                     </div>
                     <div class="form padd-15" onload="setMailto()">
                         <!--<form action="message.php" method="post" onsubmit="return validateForm()"> -->
-                        <form id="contactForm" method="post" enctype="text/plain" onsubmit="return validateForm()>
+                        <form id="form" method="post" enctype="text/plain" onsubmit="return validateForm()>
                             <div class="row">
                                 <div class="form-info padd-15">
                                     <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -366,7 +366,7 @@
             var user = "simonkamau9000";
             var domain = "gmail.com";
             var email = encodeEmail(user, domain);
-            var form = document.getElementById('contactForm');
+            var form = document.getElementById('form');
             form.action = "mailto:" + email;
         }
                         </script>
