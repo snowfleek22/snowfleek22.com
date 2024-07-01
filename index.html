@@ -356,19 +356,7 @@
                                 // You can add client-side validation here if needed
                                 return true; // Return true if the form is valid, false otherwise
                             }
-                            // Encode email address to hide from bots
-        function encodeEmail(user, domain) {
-            return user + '@' + domain;
-        }
-
-        // Set the mailto action dynamically
-        function setMailto() {
-            var user = "simonkamau9000";
-            var domain = "gmail.com";
-            var email = encodeEmail(user, domain);
-            var form = document.getElementById('form');
-            form.action = "mailto:" + email;
-        }
+         
                         </script>
                         
                     </div>
