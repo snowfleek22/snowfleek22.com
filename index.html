@@ -330,7 +330,9 @@
                         <!--contact info end-->
 
                     </div>
-                    <div class="form padd-15" onload="setMailto()">
+
+                    <!-- *****form start***** -->
+                    
                         <!--<form action="message.php" method="post" onsubmit="return validateForm()"> -->
                         <form id="form" method="post" enctype="text/plain" onsubmit="return validateForm()>
                             <div class="row">
@@ -340,7 +342,7 @@
                                 <div class="form-info padd-15">
                                     <input type="email" id="email" name="email" placeholder="Your Email" required>
                                 </div>
-                            </div>    
+                               
                             <div class="subject padd-15">
                                 <input type="subject" id="subject" name="subject" placeholder="Subject" required>
                             </div>
@@ -350,18 +352,23 @@
                             <div class="submit-btn">
                                 <button type="submit" class="btn">Send</button>
                             </div>
+                            </div> 
+                    
+                    
                         </form>
-                        <script>
+                  
+                        
+                        
+                    </div>
+                </div>
+            </section>
+            <script>
                             function validateForm() {
                                 // You can add client-side validation here if needed
                                 return true; // Return true if the form is valid, false otherwise
                             }
          
                         </script>
-                        
-                    </div>
-                </div>
-            </section>
             <!--section contacts end-->
             <!--social media start-->
             <section class="social-media section">
