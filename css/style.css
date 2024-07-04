@@ -728,6 +728,11 @@ ul
     max-width: 100%;
     width: 100%;
     
+    
+}
+form
+{
+    margin-top: 40px;
 }
 .form-info 
 {
