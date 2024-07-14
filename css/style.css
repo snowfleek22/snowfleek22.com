@@ -189,6 +189,16 @@ ul
     margin-right: 15px;
    
 }
+.toggle-btn
+{ 
+    position: fixed;
+    left: 3%;
+    top: 3%;
+    height: 50px;
+    z-index: 101;
+    display: none;
+    color: var(--text-black-100);
+}
 .main-content
 {
     padding-left: 270px;
