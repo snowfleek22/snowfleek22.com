@@ -850,6 +850,10 @@ form textarea
     {
         left: -270px;
     }
+    .toggle-btn 
+    {
+        display: block;
+    }
     .main-content
     {
         padding-left: 0;
