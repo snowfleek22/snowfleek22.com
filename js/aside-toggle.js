@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (asideNav.style.display === "none" || asideNav.style.display === "") {
             asideNav.style.display = "block";
             asideNav.style.left = "0";
-            asideNav.style.width =270px";
+            asideNav.style.width = "270px";
         } else {
             asideNav.style.display = "none";
         }
