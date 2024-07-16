@@ -20,6 +20,11 @@ function scrollToPortfolio() {
     aboutSection.scrollIntoView({behavior: "smooth"})
     
 }
+function scrollToContact() {
+    var aboutSection = document.querySelector('.contact');
+    aboutSection.scrollIntoView({behavior: "smooth"})
+    
+}
 
 
 /* ************** typing animation ****************** */
