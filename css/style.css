@@ -850,6 +850,9 @@ form textarea
     {
         left: -270px;
     }
+    .aside.active {
+        display: block;
+    }
     .toggle-btn 
     {
         display: block;
