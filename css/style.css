@@ -798,6 +798,10 @@ form textarea
     background: linear-gradient(  var(--bg-black-900),  var(--bg-black-150));
     color: white;
 }
+.social-media .container
+{
+    padding-left:270px;
+}
 .social-media .row
 {
     position: relative;
