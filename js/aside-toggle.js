@@ -16,16 +16,29 @@ document.addEventListener("DOMContentLoaded", function() {
             asideNav.style.display = "none";
         }
     });
-    // Close the aside when clicking outside of it on small screens
-    document.addEventListener("click", function(event) {
-        const asideNav = document.querySelector(".aside");
+
+    function handleOutsideClick(event) {
         if (!event.target.closest('.aside') && !event.target.closest('#toggle-nav-btn')) {
             asideNav.classList.remove("active");
             asideNav.style.display = "none";
             toggleNavBtn.querySelector("i").classList.add("fa-bars");
             toggleNavBtn.querySelector("i").classList.remove("fa-times");
         }
-    });
+    }
+
+    function updateOutsideClickHandler() {
+        if (window.matchMedia("(max-width: 1150px)").matches) {
+            document.addEventListener("click", handleOutsideClick);
+        } else {
+            document.removeEventListener("click", handleOutsideClick);
+        }
+    }
+
+    // Initial check
+    updateOutsideClickHandler();
+
+    // Update handler on window resize
+    window.addEventListener("resize", updateOutsideClickHandler);
 
     // Close the aside when clicking a link inside it on small screens
     asideNav.querySelectorAll("a").forEach(link => {
