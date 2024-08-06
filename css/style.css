@@ -861,6 +861,10 @@ form textarea
     {
         display: block;
     }
+    .social-media .container
+    {
+       padding-left:0;
+    }
     .main-content
     {
         padding-left: 0;
