@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const toggleNavBtn = document.getElementById("toggle-nav-btn");
     const asideNav = document.querySelector(".aside");
 
-    toggleNavBtn.addEventListener("click", function() {
+    toggleNavBtn.addEventListener("click", function () {
         // Toggle the icon classes between fa-bars and fa-times
         toggleNavBtn.querySelector("i").classList.toggle("fa-bars");
         toggleNavBtn.querySelector("i").classList.toggle("fa-times");
@@ -29,8 +29,14 @@ document.addEventListener("DOMContentLoaded", function() {
     function updateOutsideClickHandler() {
         if (window.matchMedia("(max-width: 1150px)").matches) {
             document.addEventListener("click", handleOutsideClick);
+            if (asideNav.style.display === "block") {
+                asideNav.style.display = "none"; // Hide sidebar when switching to small screen
+            }
         } else {
             document.removeEventListener("click", handleOutsideClick);
+            asideNav.style.display = "block"; // Ensure sidebar is visible on large screens
+            asideNav.style.left = "0";
+            asideNav.style.width = "270px";
         }
     }
 
@@ -40,13 +46,15 @@ document.addEventListener("DOMContentLoaded", function() {
     // Update handler on window resize
     window.addEventListener("resize", updateOutsideClickHandler);
 
-    // Close the aside when clicking a link inside it on small screens
+    // Close the aside when clicking a link inside it only on small screens
     asideNav.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", function() {
-            asideNav.classList.remove("active");
-            asideNav.style.display = "none";
-            toggleNavBtn.querySelector("i").classList.add("fa-bars");
-            toggleNavBtn.querySelector("i").classList.remove("fa-times");
+        link.addEventListener("click", function () {
+            if (window.matchMedia("(max-width: 1150px)").matches) {
+                asideNav.classList.remove("active");
+                asideNav.style.display = "none";
+                toggleNavBtn.querySelector("i").classList.add("fa-bars");
+                toggleNavBtn.querySelector("i").classList.remove("fa-times");
+            }
         });
     });
 });
